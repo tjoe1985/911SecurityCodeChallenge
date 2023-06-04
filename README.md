@@ -8,33 +8,33 @@ The number of sensors and storms is not fixed and may change dynamically. Theref
 Regarding including the time of overlaps, although the storm information doesn't provide a specific time reference, the assumption is that the "registered" field in the sensor data can be used as an event trigger. By utilizing this field, the code can be easily modified to include the time when the overlaps occurred. The implementation of this feature will be added to the code in the near future.
 #Test coverage: 87.9% 
 # Questions and answers
-###The output for only active sensors
+##The output for only active sensors
 Was coded already on the code but would be nice to add the options for engineers to decide if the want to use it or not. 
-### Is there any overlap between the sensor’s area and a given storm’s area?
+## Is there any overlap between the sensor’s area and a given storm’s area?
 Not on the provided samples but for testing purporses we added some on the test to check the program is running fine.
-### How much does a storm overlap with a sensor?
+## How much does a storm overlap with a sensor?
 Not coded on the challenge but we already had access to the storm's radius and sensor's range and are calculating the 
 distance so another function could be implemente to make better use of the information. 
-### Can the output contain the start/end time of a storm’s overlap, and the duration of that time?
+## Can the output contain the start/end time of a storm’s overlap, and the duration of that time?
 The output can take anything that we put in to it. However we would have to add more information to the incoming request
 or start tracking the storm movement. Bases on current information and understanding we are not able to add it. 
-### How could the output indicate if the storm is moving towards the sensor or if it’s passing by on the edge of the sensor’s radius?
+## How could the output indicate if the storm is moving towards the sensor or if it’s passing by on the edge of the sensor’s radius?
 With the provided information and no more context not sure. But by adding more fields to the information coming like 
 capturing lat and lon on different time intervals would allow us to tell direction.
 ## Grouping the next three questions 
-### If the storm data is sent once per second or once per hour, how does that change the solution theoretically?
-### If we have 1000 sensors, how does that change the solution theoretically?
-###If the list of storms is between 0 and 1000, how does that change the solution theoretically?
+## If the storm data is sent once per second or once per hour, how does that change the solution theoretically?
+## If we have 1000 sensors, how does that change the solution theoretically?
+##If the list of storms is between 0 and 1000, how does that change the solution theoretically?
 The rate and amount of data will affect how we scale the application. Too fast or too much
 we would want to implement some sort of concurrency as needed to be able to handle the rate and amount 
 of data being processed. It would all depend on the hardware, and resources we have available and able to spend 
-###If a storm’s radius is never larger than 30 kilometers, how does that change the solution?
+##If a storm’s radius is never larger than 30 kilometers, how does that change the solution?
 Not sure how to answer this without more context at the moment with just math context the calculation would run the same. But i have a lot to learn.  
-###What other data could the engineers provide that would help in determining if there is a correlation between the sensors and the storms?
+##What other data could the engineers provide that would help in determining if there is a correlation between the sensors and the storms?
 With current context, time of storm occurrence, direction or second read of storm location, was there thunder or wind? 
 anything that can show influence on the sensors other than location. A small info class as to how sensor works and what 
 can mess them up? not sure reaching at this point.   
-###How could this be adapted to send an alert in real-time to users/operators of these sensors?
+##How could this be adapted to send an alert in real-time to users/operators of these sensors?
 We can integrate to any messaging app and relate permanent information as needed. would talk to the operators to see 
 what would useful information is and then generate it as needed. 
 # There is a Storm Coming
