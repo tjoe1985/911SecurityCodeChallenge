@@ -20,7 +20,7 @@ func TestCalculateDistance(t *testing.T) {
 		args args
 		want float64
 	}{
-		// TODO: Add test cases.
+
 		{
 			name: "0 k",
 			args: args{
