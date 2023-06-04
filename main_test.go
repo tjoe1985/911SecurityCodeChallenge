@@ -286,7 +286,7 @@ func Test_findOverlabsHandler(t *testing.T) {
     ]
 }`,
 			expectedCode: http.StatusOK,
-			expectedBody: `["Sensor ID: joels Overlapping Storm:JoelsStorm","Sensor ID: qkis Overlapping Storm:JoelsStorm"]`,
+			expectedBody: `["Sensor ID: joels Overlapping Storm:JoelsStorm Duration will be added soon","Sensor ID: qkis Overlapping Storm:JoelsStorm Duration will be added soon"]`,
 		},
 		{
 			name: "EmptyInput",
@@ -378,7 +378,7 @@ func Test_checkSensorStormOverlap(t *testing.T) {
 					},
 				},
 			},
-			want: []string{"Sensor ID: 6479f6f5148d1c1febf67a09 Overlapping Storm:Bad Storm"},
+			want: []string{"Sensor ID: 6479f6f5148d1c1febf67a09 Overlapping Storm:Bad Storm Duration will be added soon"},
 		},
 	}
 	for _, tt := range tests {

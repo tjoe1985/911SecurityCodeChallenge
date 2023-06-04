@@ -6,10 +6,10 @@ The service will be implemented as a simple API that can handle incoming request
 The number of sensors and storms is not fixed and may change dynamically. Therefore, the service will read the sensor and storm data as required, allowing for flexibility in the system.
 
 Regarding including the time of overlaps, although the storm information doesn't provide a specific time reference, the assumption is that the "registered" field in the sensor data can be used as an event trigger. By utilizing this field, the code can be easily modified to include the time when the overlaps occurred. The implementation of this feature will be added to the code in the near future.
-
+#Test coverage: 87.9% 
 # Questions and answers
 ###The output for only active sensors
-was coded already on the code but would be nice to add the options for engineers to decide if the want to use it or not. 
+Was coded already on the code but would be nice to add the options for engineers to decide if the want to use it or not. 
 ### Is there any overlap between the sensor’s area and a given storm’s area?
 Not on the provided samples but for testing purporses we added some on the test to check the program is running fine.
 ### How much does a storm overlap with a sensor?

@@ -76,7 +76,7 @@ func checkSensorStormOverlap(sensors []Sensor, storms []Storm) []string {
 		for _, storm := range storms {
 
 			if IsWithinRadius(sensor.Latitude, sensor.Longitude, storm.Latitude, storm.Longitude, storm.Radius) {
-				log.Println("Sensor ID: " + sensor.ID + " Overlapping with Storm:" + storm.Name + " Duration will be added soon")
+				log.Println("Sensor ID: " + sensor.ID + " Overlapping with Storm: " + storm.Name + " Duration will be added soon")
 				overlappingSensors = append(overlappingSensors, "Sensor ID: "+sensor.ID+" Overlapping Storm:"+storm.Name+" Duration will be added soon")
 			}
 		}
