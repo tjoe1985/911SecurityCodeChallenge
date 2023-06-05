@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"math"
 	"net/http"
@@ -69,7 +68,8 @@ func checkSensorStormOverlap(sensors []Sensor, storms []Storm) []string {
 	for _, sensor := range sensors {
 
 		if !sensor.IsActive {
-			fmt.Println("Sensor not active moving on")
+			//use for debugging only.
+			//fmt.Println("Sensor not active moving on")
 			continue
 		}
 
